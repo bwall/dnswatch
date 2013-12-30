@@ -32,7 +32,8 @@ def CreateResult(answer, time=None):
     d['name'] = answer.name.to_text(True)
     d['answers'] = []
     for a in answer:
-        d['answers'].append(a.to_text())
+        if a.to_text() != '92.242.140.2':
+            d['answers'].append(a.to_text())
     d['answers'].sort()
     return d
 
